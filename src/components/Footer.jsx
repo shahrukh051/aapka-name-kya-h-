@@ -1,0 +1,64 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="inner">
+        <div className="footer-grid">
+
+          {/* Brand column */}
+          <div>
+            <Link to="/" style={{ display: 'inline-block', marginBottom: 16 }}>
+              <img
+                src="/logo.png"
+                alt="UDRAH Industries"
+                style={{
+                  height: 48,
+                  width: 'auto',
+                  mixBlendMode: 'lighten',
+                  filter: 'brightness(1.1)',
+                }}
+              />
+            </Link>
+            <p className="body on-dark" style={{ maxWidth: '30ch' }}>
+              The third eye of nature — a living air system for the way you breathe, live, and experience your space.
+            </p>
+          </div>
+
+          {/* Explore */}
+          <div>
+            <div className="footer-col-title">Explore</div>
+            <Link className="footer-link" to="/product">Product</Link>
+            <Link className="footer-link" to="/smart-air">Smart Air</Link>
+            <Link className="footer-link" to="/about">About Us</Link>
+            <Link className="footer-link" to="/reserve">Be The Member</Link>
+          </div>
+
+          {/* Company */}
+          <div>
+            <div className="footer-col-title">Company</div>
+            <Link className="footer-link" to="/about">Our Story</Link>
+            <a className="footer-link" href="#">Press</a>
+            <a className="footer-link" href="#">Careers</a>
+            <a className="footer-link" href="#">Contact</a>
+          </div>
+
+          {/* Stay Connected */}
+          <div>
+            <div className="footer-col-title">Stay Connected</div>
+            <a className="footer-link" href="#">Instagram</a>
+            <a className="footer-link" href="#">LinkedIn</a>
+            <a className="footer-link" href="#">Newsletter</a>
+          </div>
+
+        </div>
+
+        <div className="footer-bottom">
+          <span>© 2026 UDRAH. Precision engineered. Naturally alive.</span>
+          <span>Privacy · Terms</span>
+        </div>
+      </div>
+    </footer>
+  )
+}
