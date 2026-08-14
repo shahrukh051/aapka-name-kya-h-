@@ -48,15 +48,11 @@ export default function Nav() {
           </NavLink>
 
           <div className="nav-links">
-            <NavLink to="/smart-air" className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}>
-              Smart Air
-            </NavLink>
+            <a href="#" className="nav-link">Smart Air</a>
             <NavLink to="/product" className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}>
               Product
             </NavLink>
-            <NavLink to="/about" className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}>
-              About Us
-            </NavLink>
+            <a href="#" className="nav-link">About Us</a>
           </div>
 
           <NavLink to="/reserve" className="nav-cta btn btn-primary-on-dark">
@@ -79,9 +75,9 @@ export default function Nav() {
           <NavLink to="/" className="mobile-logo-link" onClick={toggleMenu}>
             <img src="/logo.png" alt="UDRAH" className="mobile-nav-logo" />
           </NavLink>
-          <NavLink to="/smart-air" className="mobile-link">Smart Air</NavLink>
+          <a href="#" className="mobile-link">Smart Air</a>
           <NavLink to="/product"   className="mobile-link">Product</NavLink>
-          <NavLink to="/about"     className="mobile-link">About Us</NavLink>
+          <a href="#" className="mobile-link">About Us</a>
           <NavLink to="/reserve"   className="mobile-link mobile-cta">Be The Member →</NavLink>
         </div>
       </div>

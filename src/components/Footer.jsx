@@ -30,15 +30,12 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Explore</div>
             <Link className="footer-link" to="/product">Product</Link>
-            <Link className="footer-link" to="/smart-air">Smart Air</Link>
-            <Link className="footer-link" to="/about">About Us</Link>
             <Link className="footer-link" to="/reserve">Be The Member</Link>
           </div>
 
           {/* Company */}
           <div>
             <div className="footer-col-title">Company</div>
-            <Link className="footer-link" to="/about">Our Story</Link>
             <a className="footer-link" href="#">Press</a>
             <a className="footer-link" href="#">Careers</a>
             <a className="footer-link" href="#">Contact</a>
