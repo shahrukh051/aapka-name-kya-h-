@@ -249,48 +249,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════ SMART AIR TEASER ═══════════ */}
-      <section className="section section-dark">
-        <div className="inner">
-          <div className="grid-2 smart-teaser" style={{ alignItems: 'center' }}>
-            <div className="reveal">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" />
-                <span className="eyebrow-label">Intelligence, Built In</span>
-              </div>
-              <h2 className="h2" style={{ color: 'var(--warmwhite)' }}>
-                Air that reports<br />on itself.
-              </h2>
-              <p className="body-lg on-dark" style={{ marginTop: 24, maxWidth: '44ch' }}>
-                Sensors inside UDRAH continuously read particulate levels,
-                CO₂, humidity and oxygen output — translating an invisible
-                layer of air quality into information you can actually act on.
-              </p>
-              <Link to="/smart-air" className="btn btn-secondary-on-dark" style={{ marginTop: 36 }}>
-                See Smart Air <span className="btn-arrow">→</span>
-              </Link>
-            </div>
 
-            <div className="media-frame reveal reveal-delay-1" style={{ aspectRatio: '4/5' }}>
-              <div className="smart-hud">
-                {[
-                  { label: 'PM 2.5', value: '—', unit: 'μg/m³' },
-                  { label: 'CO₂',   value: '—', unit: 'ppm' },
-                  { label: 'O₂',    value: '—', unit: '%' },
-                  { label: 'AQI',   value: '—', unit: 'index' },
-                ].map(m => (
-                  <div key={m.label} className="hud-metric">
-                    <span className="hud-label">{m.label}</span>
-                    <span className="hud-value">{m.value}</span>
-                    <span className="hud-unit">{m.unit}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="frame-label">Sensing Every Cubic Meter</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════ ABOUT TEASER ═══════════ */}
       <section className="section section-stone">
