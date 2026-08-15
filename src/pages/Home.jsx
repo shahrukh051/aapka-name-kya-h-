@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import AlgaeSphere from '../components/AlgaeSphere'
 import Footer from '../components/Footer'
+import ReelCarousel from '../components/ReelCarousel'
 import './Home.css'
+
 
 export default function Home() {
   const pageRef = useRef(null)
@@ -78,43 +79,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════ PRODUCT INTRODUCTION ═══════════ */}
-      <section className="section" id="how-it-works">
+      {/* ═══════════ PRODUCT + REELS ═══════════ */}
+      <section className="section product-reels-section" id="how-it-works">
         <div className="inner">
-          <div className="grid-2 prod-intro" style={{ alignItems: 'end', marginBottom: 72 }}>
-            <div className="reveal">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" style={{ background: 'var(--algae)' }} />
-                <span className="eyebrow-label dim">Living Air Technology</span>
+
+          {/* Section header */}
+          <div className="eyebrow reveal" style={{ marginBottom: 48 }}>
+            <span className="eyebrow-dot" style={{ background: 'var(--algae)' }} />
+            <span className="eyebrow-label dim">Living Air Technology</span>
+          </div>
+
+          {/* ── Top row: product card LEFT + reels RIGHT ── */}
+          <div className="product-reels-layout">
+
+            {/* LEFT: Product Card */}
+            <div className="product-card-left reveal">
+              <div className="prod-card prod-card-hero">
+                <div className="prod-hero-img-wrap">
+                  <img src="/udrah-product.png" alt="UDRAH Pro System" className="prod-hero-img" />
+                </div>
+                <div className="prod-card-body">
+                  <p className="prod-card-tag">FOR MODERN SPACES</p>
+                  <h3 className="prod-card-title">UDRAH Pro System</h3>
+                  <p className="prod-card-sub">Complete living air purification</p>
+                  <div className="prod-card-rating">
+                    {'★★★★★'} <span>(116)</span>
+                  </div>
+                  <Link to="/product" className="prod-card-btn">Explore →</Link>
+                </div>
               </div>
-              <h2 className="h2">More than clean air.<br />A new way to live with it.</h2>
             </div>
-            <p className="body-lg reveal reveal-delay-1">
-              UDRAH brings advanced air purification and living microalgae
-              technology together in one intelligent system. Designed for modern
-              spaces, it doesn't just clean the air around you — it introduces a
-              living biological system into the way you breathe, live, and
-              experience your environment.
-            </p>
+
+            {/* RIGHT: 3D Instagram Reel Carousel */}
+            <div className="reels-wrap reveal reveal-delay-1">
+              <ReelCarousel />
+            </div>
+
           </div>
 
-          {/* Video section */}
-          <div className="media-frame reveal" style={{ aspectRatio: '16/8' }}>
-            <div className="video-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
-              </svg>
-              <span>Product Video — Coming Soon</span>
-            </div>
-            <div className="frame-label">UDRAH — System in Motion</div>
-          </div>
-        </div>
-      </section>
 
-      {/* ═══════════ PURIFY / LIVE / BREATHE ═══════════ */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="inner">
-          <div className="grid-3 reveal">
+          {/* ── Full-width bottom row: Purify / Live / Breathe ── */}
+          <div className="grid-3 reveal" style={{ marginTop: 64 }}>
             <div>
               <span className="tech-index">01</span>
               <h3 className="h3" style={{ margin: '20px 0 14px' }}>Purify</h3>
@@ -141,7 +146,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="reveal prod-closing" style={{ marginTop: 64 }}>
+          <div className="reveal prod-closing" style={{ marginTop: 48 }}>
             <p className="h3" style={{ fontWeight: 600 }}>
               Engineered for your space. Inspired by nature.
             </p>
@@ -149,8 +154,10 @@ export default function Home() {
               Explore the Product <span className="btn-arrow">→</span>
             </Link>
           </div>
+
         </div>
       </section>
+
 
       {/* ═══════════ FLOWLINE ═══════════ */}
       <svg className="flowline" viewBox="0 0 1280 64" preserveAspectRatio="none" aria-hidden="true">
@@ -167,55 +174,22 @@ export default function Home() {
           style={{ offsetPath: "path('M0,32 C 220,8 340,56 640,32 C 940,8 1060,56 1280,32')" }} />
       </svg>
 
-      {/* ═══════════ 3D TEASER ═══════════ */}
-      <section className="section section-dark three-d-section">
-        <div className="inner">
-          <div className="three-d-grid">
-            <div className="reveal three-d-text">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" />
-                <span className="eyebrow-label">Living Core</span>
-              </div>
-              <h2 className="h2" style={{ color: 'var(--warmwhite)' }}>
-                Precision on the outside.<br />
-                <span style={{ color: 'var(--mint)' }}>Life on the inside.</span>
-              </h2>
-              <p className="body-lg on-dark" style={{ marginTop: 24, maxWidth: '44ch' }}>
-                At the heart of UDRAH sits a cultured microalgae system, visible through a
-                semi-transparent chamber wall. Not simulated — genuinely alive,
-                continuously working inside the machine.
-              </p>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
-                <span className="chip on-dark">Live Microalgae</span>
-                <span className="chip on-dark">Photosynthesis</span>
-                <span className="chip on-dark">Real-time O₂</span>
-              </div>
-              <Link to="/product" className="btn btn-secondary-on-dark" style={{ marginTop: 40 }}>
-                See the Product <span className="btn-arrow">→</span>
-              </Link>
-            </div>
 
-            <div className="three-d-canvas reveal reveal-delay-1">
-              <AlgaeSphere />
-              <div className="three-d-label">
-                <span className="tech-index">Interactive — Move mouse over sphere</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ═══════════ KEY BENEFITS ═══════════ */}
-      <section className="section section-stone">
+      {/* ═══════════ WHY UDRAH (merged) ═══════════ */}
+      <section className="section section-stone" id="why-udrah">
         <div className="inner">
+
+          {/* Header */}
           <div className="eyebrow reveal" style={{ justifyContent: 'center', marginBottom: 16 }}>
             <span className="eyebrow-dot" style={{ background: 'var(--algae)' }} />
             <span className="eyebrow-label dim">Why UDRAH</span>
           </div>
-          <h2 className="h2 reveal" style={{ textAlign: 'center', marginBottom: 80 }}>
+          <h2 className="h2 reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
             Built at the intersection of<br />engineering and biology.
           </h2>
 
+          {/* Benefits grid */}
           <div className="benefits-grid">
             {[
               {
@@ -246,24 +220,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-
-
-      {/* ═══════════ ABOUT TEASER ═══════════ */}
-      <section className="section section-stone">
-        <div className="inner">
-          <div className="grid-2 about-teaser" style={{ alignItems: 'center' }}>
-            <div className="reveal">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" style={{ background: 'var(--algae)' }} />
-                <span className="eyebrow-label dim">Why UDRAH</span>
-              </div>
-              <h2 className="h2">
-                Built at the intersection of engineering and biology.
-              </h2>
-              <p className="body-lg" style={{ marginTop: 24 }}>
+          {/* Brand story + quote — side by side below the grid */}
+          <div className="grid-2 about-teaser reveal" style={{ alignItems: 'center', marginTop: 72 }}>
+            <div>
+              <p className="body-lg" style={{ marginTop: 0 }}>
                 UDRAH exists because purification alone was never the whole
                 answer. We design at the meeting point of precision hardware and
                 living systems — so the air in your space isn't just filtered,
@@ -285,8 +246,10 @@ export default function Home() {
               </p>
             </div>
           </div>
+
         </div>
       </section>
+
 
       {/* ═══════════ CTA ═══════════ */}
       <section className="section section-dark cta-section">
